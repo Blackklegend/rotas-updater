@@ -12,6 +12,7 @@ export function fecthNPull(payload: any) {
   }
 
   shelljs.cd(_pathToRepo)
+  console.log(shelljs.exec(`git status`))
   shelljs.exec(`git fetch`)
   shelljs.exec(`git switch ${defaultBranch}`)
   shelljs.exec(`git pull`)

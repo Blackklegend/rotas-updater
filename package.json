@@ -4,7 +4,7 @@
   "description": "Atualizador de rotas",
   "main": "index.ts",
   "author": "Vitor",
-  "license": "unlicense",
+  "license": "Unlicense",
   "private": false,
   "dependencies": {
     "@types/cors": "^2.8.12",
@@ -13,9 +13,12 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "shelljs": "^0.8.5"
+    "shelljs": "^0.8.5",
+    "typescript": "^4.8.2"
   },
   "scripts": {
-    "dev": "nodemon src/index.ts"
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
   }
 }

@@ -1,9 +1,11 @@
 import express from 'express';
 import cors from 'cors'
 import router from './routers/routers'
+import dotenv from 'dotenv'
+dotenv.config()
 
 const app = express();
-const port = 9290;
+const port = process.env.PORT || 9290;
 
 app.use(cors());
 app.use(express.json());
